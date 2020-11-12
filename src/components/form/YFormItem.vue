@@ -50,7 +50,8 @@ export default {
 
       // 开始校验
       const schema = new Schema(desc);
-      schema.validate(
+      // schema的validate方法返回的是Promis对象
+      return schema.validate(
         {
           [this.prop]: value,
         },
